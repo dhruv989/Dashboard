@@ -1,0 +1,86 @@
+                div#sidebar{
+                    position:fixed;
+                    height:100%;
+                    width:200px; 
+                    top:0;
+                    left:0;
+                    background:#5bc995; 
+                }
+                
+                #head{
+                    text-align: center;
+                }
+                ul{
+                    padding-left: 0;
+                    text-align: left;
+                    padding: 3%;
+                }
+                h3{
+                    text-align: center;
+                }
+                body{
+                    background-color:#fff4c4;
+                }
+                div#realdata{
+                    padding-left: 12%;
+                    width:80%;
+                    height:1600px;
+
+                }
+                #container,#buttondiv{
+                    margin:0 auto;
+                    width:80%;
+                    overflow:auto;
+                }
+                li{
+                    list-style: none;
+
+                }
+                a{
+                    text-decoration: none;
+                    color:black;
+                }
+                a:hover{
+                    color: blue;
+                }
+                input{
+                    height: 2em;
+                }
+
+
+                table.gridtable {
+                    margin:0 auto;
+                    width:95%;
+                    overflow:auto;
+                    font-family: helvetica,arial,sans-serif;
+                    font-size:14px;
+                    color:#333333;
+                    border-width: 1px;
+                    border-color: #666666;
+                    border-collapse: collapse;
+                    text-align: centre;
+                    margin-top: 2%;
+                }
+                table.gridtable th {
+                    border-width: 1px;
+                    padding: 8px;
+                    border-style: solid;
+                    border-color: #666666;
+                    background-color: #F6B4A5;
+                }
+                 table.center {
+                     margin-left:auto; 
+                     margin-right:auto;
+                  }
+                table.gridtable td {
+                    border-width: 1px;
+                    padding: 8px;
+                    border-style: solid;
+                    border-color: #666666;
+                }
+                .badrowcount {
+                  background-color: coral;
+                }
+                .notnumeric {
+                  background-color: yellow;
+                }

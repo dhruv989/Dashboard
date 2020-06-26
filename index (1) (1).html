@@ -1,0 +1,184 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+    	<title>project</title>
+    <meta charset="utf-8" />
+
+            <style>
+                div#sidebar{
+                    position:fixed;
+                    height:100%;
+                    width:200px; 
+                    top:0;
+                    left:0;
+                    background:#5bc995; 
+                }
+                
+                #head{
+                    text-align: center;
+                }
+                ul{
+                    padding-left: 0;
+                    text-align: left;
+                    padding: 3%;
+                }
+                h3{
+                    text-align: center;
+                }
+                body{
+                    background-color:#fff4c4;
+                }
+                div#realdata{
+                    padding-left: 12%;
+                    width:80%;
+                    height:1600px;
+
+                }
+                #container,#buttondiv{
+                    margin:0 auto;
+                    width:80%;
+                    overflow:auto;
+                }
+                li{
+                    list-style: none;
+
+                }
+                a{
+                    text-decoration: none;
+                    color:black;
+                }
+                a:hover{
+                    color: blue;
+                }
+                input{
+                    height: 2em;
+                }
+
+
+                table.gridtable {
+                    margin:0 auto;
+                    width:95%;
+                    overflow:auto;
+                    font-family: helvetica,arial,sans-serif;
+                    font-size:14px;
+                    color:#333333;
+                    border-width: 1px;
+                    border-color: #666666;
+                    border-collapse: collapse;
+                    text-align: centre;
+                    margin-top: 2%;
+                }
+                table.gridtable th {
+                    border-width: 1px;
+                    padding: 8px;
+                    border-style: solid;
+                    border-color: #666666;
+                    background-color: #F6B4A5;
+                }
+                 table.center {
+                     margin-left:auto; 
+                     margin-right:auto;
+                  }
+                table.gridtable td {
+                    border-width: 1px;
+                    padding: 8px;
+                    border-style: solid;
+                    border-color: #666666;
+                }
+                .badrowcount {
+                  background-color: coral;
+                }
+                .notnumeric {
+                  background-color: yellow;
+                }
+            </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+        </head>
+
+    	<link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://kit.fontawesome.com/7b4a58460b.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+    	<div class ="wrapper">
+    		<div id="head">
+    		<h1>Reconcillation Dashboard</h1>
+    		
+    	</div>
+    		
+    	</div>
+        <br>
+        <br>
+    	<div id="real">
+    		<div id="sidebar">
+    			<br>
+    			<br>
+    			<br>
+    			<ul>
+                    <hr><li><h3>Dashboard</h3></li>
+    				<hr><li><i class="fas fa-home fa-fw"></i><a href="#" class="navigation"> Home</a><br></li><hr>
+    				<li><i class="fa fa-line-chart fa-fw"></i><a href="#" class="navigation"> Detail analysis</a><br></li><hr>
+    				<li><i class="fas fa-file-invoice fa-fw"></i><a href="#" class="navigation">Recent changes</a><br></li><hr>
+    				<li><i class="fas fa-sign-out-alt fa-fw"></i><a href="#" class="navigation">exit</a><br></li><hr>
+    			</ul>
+
+    			
+    		</div>
+            <div id="realdata">
+                <div id="buttondiv">
+                <form>
+                    <label for="Insert file">Insert file</label>
+                    <input type="file" name="Insert" id="inputfile" accept=".txt/.csv"/>
+                    <input type="button" name="viewfile" id="viewfile" value="Upload"/>
+
+                </form><br>
+                <br>
+                <form>
+                    <label for="search">Search file</label>
+                    <input type="text" name="search" id="myInput" onkeyup="function()" placeholder="Search for names.." title="Type in a name" required>
+                    
+    </div>
+                </form><br>
+                <div class="container" id="container">
+                     <button onclick="javascript:demoFromHTML();">EXPORT TO PDF</button>
+                     <button onclick="exportToExcel('tableMain', 'testdata')">EXPORT TO EXCEL</button>
+
+
+
+            
+     
+    <table class="gridtable" id="tableMain">
+
+
+                <thead>
+                  <tr class="header">
+                      <th onclick="sortTable('sno')">S.No</th>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th onclick="sortTable('id')">ID</th>
+                      <th>Contact No.</th>
+                      <th>City</th>
+                  </tr>
+                </thead>
+                <tbody id='tableBody'>
+
+                </tbody>
+              </table>
+          </div>
+            </div>
+    		
+   
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+
+
+
+       
+
+     <script src="load.js"></script>
+
+
+
+    </body>
+    </html>
